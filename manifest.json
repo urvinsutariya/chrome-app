@@ -1,0 +1,35 @@
+{
+  "name": "Media Player",
+  "version": "1.00",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "kiosk_enabled" : true,
+  "kiosk_only" : true,
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"],
+      "persistent": false
+    }
+  },
+  "icons": {"128": "icons/icon128.png"},
+  "permissions": [
+    "app.window.fullscreen", "app.window.fullscreen.overrideEsc",
+    "http://*/*", "https://*/*",
+    {"fileSystem": ["write", "retainEntries", "directory"]},
+    "accessibilityFeatures.read",
+    "accessibilityFeatures.modify",
+    "fullscreen",
+    "power",
+    "unlimitedStorage",
+    "webview",
+    "\u003Call_urls>",
+    "enterprise.deviceAttributes"
+  ],
+  "file_handlers": {
+    "text": {
+      "types": [
+          "video/*"
+      ]
+    }
+  }
+}
