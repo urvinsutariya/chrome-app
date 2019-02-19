@@ -6,10 +6,8 @@ var videoList = [];
 var myvids = [];
 count = 0;
 videoUrls = {
-	"development": ["https://storage.googleapis.com/titan_kiosk/SampleVideo_1280x720_10mb.mp4",
-	    "https://storage.googleapis.com/titan_kiosk/star_trails.mov"
-	],
-	"production": ["https://storage.googleapis.com/titan_kiosk/test1.webm"]
+	"development": ["Your video URLs goes here"],
+	"production": ["Your video URLs goes here"]
 }
 isDevelopmentMode = false;
 chrome.management.getSelf(function(callback){
@@ -35,9 +33,6 @@ function errorHandler(e) {
             console.log(JSON.parse(text));
             response = JSON.parse(text)
             if(response !== undefined && response.video !== undefined){
-//            rotation = JSON.parse(text).rotation;
-//            rotate = rotation;
-//            console.log(rotate);
                 return response.video;
             }
         });
